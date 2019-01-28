@@ -116,5 +116,12 @@ contact[1].textContent=siteContent.contact.address;
 contact[2].textContent=siteContent.contact.phone;
 contact[3].textContent=siteContent.contact.email;
 
+//==============================footer section =====================
+
+const footer=document.querySelector('footer').children;
+footer[0].textContent=siteContent.footer.copyright;
+
+//===========================Navigation task ==================
+
 
 
