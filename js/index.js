@@ -109,19 +109,32 @@ bottomContent3[1].textContent = siteContent['main-content']['vision-content'];
 
 //================================Contact section===================
 
-const contact=document.querySelector('.contact').children
+const contact = document.querySelector('.contact').children;
 // console.log(contact);
-contact[0].textContent=siteContent.contact["contact-h4"];
-contact[1].textContent=siteContent.contact.address;
-contact[2].textContent=siteContent.contact.phone;
-contact[3].textContent=siteContent.contact.email;
+contact[0].textContent = siteContent.contact['contact-h4'];
+contact[1].textContent = siteContent.contact.address;
+contact[2].textContent = siteContent.contact.phone;
+contact[3].textContent = siteContent.contact.email;
 
 //==============================footer section =====================
 
-const footer=document.querySelector('footer').children;
-footer[0].textContent=siteContent.footer.copyright;
+const footer = document.querySelector('footer').children;
+footer[0].textContent = siteContent.footer.copyright;
 
 //===========================Navigation task ==================
 
 
+const aNav = document.querySelector("nav").children;
+console.log(aNav);
+Array.from(aNav).forEach(item => item.style.color='green');
 
+const navTab=document.querySelector('nav');
+
+const firstElement=document.createElement('a');
+firstElement.textContent='Last Element';
+
+const secondElement=document.createElement('a');
+secondElement.textContent="First Element";
+
+navTab.append(firstElement);
+navTab.prepend(secondElement);
