@@ -89,3 +89,15 @@ const bottomContent1=bottomContent[0].children;
 //console.log(bottomContent1);
 bottomContent1[0].textContent=siteContent["main-content"]["services-h4"];
 bottomContent1[1].textContent=siteContent["main-content"]["services-content"];
+
+const bottomContent2=bottomContent[1].children;
+// console.log(bottomContent2);
+bottomContent2[0].textContent=siteContent["main-content"]["product-h4"];
+bottomContent2[1].textContent=siteContent["main-content"]["product-content"];
+
+const bottomContent3=bottomContent[2].children;
+// console.log(bottomContent3);
+bottomContent3[0].textContent=siteContent["main-content"]["vision-h4"];
+bottomContent3[1].textContent=siteContent["main-content"]["vision-content"];
+
+
