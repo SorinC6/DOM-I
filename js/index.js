@@ -68,13 +68,16 @@ const ctaText = document.querySelector('.cta-text').childNodes;
 ctaText[1].textContent = siteContent.cta.h1;
 ctaText[3].textContent = siteContent.cta.button;
 
-ctaText[3].addEventListener('click', testFunction);
+ctaText[3].addEventListener('click', buttonPressed);
 
-function testFunction() {
+function buttonPressed() {
 	container.style.display = 'none';
 
 	const newDiv = document.createElement('div');
-	newDiv.className = 'cta';
+    newDiv.className = 'cta';
+    
+    const secondDiv= document.createElement('div');
+    secondDiv.className='cta-text';
 
 	const title = document.createElement('h1');
     title.className = 'cta-text';
@@ -90,8 +93,15 @@ function testFunction() {
         container.style.display='block';
     })
 
-    newDiv.append(title);
-    newDiv.append(button);
+    secondDiv.append(title);
+    secondDiv.append(button);
+
+    const myImg=document.createElement('img');
+    myImg.src='img/imgg.png'
+    myImg.style.marginRight='80px'
+
+    newDiv.append(secondDiv);
+    newDiv.append(myImg);
 
     document.querySelector('body').append(newDiv);
 
@@ -152,9 +162,13 @@ footer[0].textContent = siteContent.footer.copyright;
 
 //===========================Navigation task ==================
 
-const aNav = document.querySelector('nav').children;
-console.log(aNav);
-Array.from(aNav).forEach((item) => (item.style.color = 'green'));
+
+const aNav = document.querySelector('nav');
+aNav.style.background='silver';
+aNav.style.padding="20px";
+aNav.style.border='2px dashed black';
+aNav.style.borderRadius="20px"
+
 
 const navTab = document.querySelector('nav');
 
@@ -166,3 +180,6 @@ secondElement.textContent = 'First Element';
 
 navTab.append(firstElement);
 navTab.prepend(secondElement);
+
+const allA=document.querySelectorAll('nav a');
+allA.forEach(item => item.style.color='green')
