@@ -52,3 +52,14 @@ a[2].textContent=siteContent.nav["nav-item-3"];
 a[3].textContent=siteContent.nav["nav-item-4"];
 a[4].textContent=siteContent.nav["nav-item-5"];
 a[5].textContent=siteContent.nav["nav-item-6"];
+
+//============================Cta  section ===============
+
+const ctaImage=document.querySelector('#cta-img');
+//console.log(cta);
+ctaImage.src=siteContent.cta["img-src"];
+
+const ctaText=document.querySelector('.cta-text').childNodes;
+// console.log(ctaText[0]);
+ctaText[0].textContent=siteContent.cta.h1;
+ctaText[3].textContent=siteContent.cta.button;
