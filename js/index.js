@@ -61,5 +61,31 @@ ctaImage.src=siteContent.cta["img-src"];
 
 const ctaText=document.querySelector('.cta-text').childNodes;
 // console.log(ctaText[0]);
-ctaText[0].textContent=siteContent.cta.h1;
+ctaText[1].textContent=siteContent.cta.h1;
 ctaText[3].textContent=siteContent.cta.button;
+
+//=============================Main COntent section =======
+
+//top content -----------
+const topContent=document.querySelector('.top-content').children;
+// console.log(topContent);
+const topContent1=topContent[0].children;
+//console.log(topContent1);
+topContent1[0].textContent=siteContent["main-content"]["features-h4"];
+topContent1[1].textContent=siteContent["main-content"]["features-content"];
+
+const topContent2=topContent[1].children;
+// console.log(topContent2);
+topContent2[0].textContent=siteContent["main-content"]["about-h4"];
+topContent2[1].textContent=siteContent["main-content"]["about-content"];
+
+//middle image -------------
+const middleImage=document.querySelector('#middle-img').src=siteContent["main-content"]["middle-img-src"];;
+
+//bottom content ------------
+const bottomContent=document.querySelector('.bottom-content').children;
+//console.log(bottomContent[0]);
+const bottomContent1=bottomContent[0].children;
+//console.log(bottomContent1);
+bottomContent1[0].textContent=siteContent["main-content"]["services-h4"];
+bottomContent1[1].textContent=siteContent["main-content"]["services-content"];
