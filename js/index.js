@@ -68,6 +68,35 @@ const ctaText = document.querySelector('.cta-text').childNodes;
 ctaText[1].textContent = siteContent.cta.h1;
 ctaText[3].textContent = siteContent.cta.button;
 
+ctaText[3].addEventListener('click', testFunction);
+
+function testFunction() {
+	container.style.display = 'none';
+
+	const newDiv = document.createElement('div');
+	newDiv.className = 'cta';
+
+	const title = document.createElement('h1');
+    title.className = 'cta-text';
+    title.textContent='Lambda School DOM I'
+
+    const button = document.createElement('button');
+    button.className='cta cta-text';
+    button.textContent="Return"
+    button.style.borderRadius="20px";
+    button.style.color="grey";
+    button.addEventListener('click', function(){
+        newDiv.style.display='none';
+        container.style.display='block';
+    })
+
+    newDiv.append(title);
+    newDiv.append(button);
+
+    document.querySelector('body').append(newDiv);
+
+}
+
 //=============================Main COntent section ===============
 
 //------------------top content -----------
@@ -123,18 +152,17 @@ footer[0].textContent = siteContent.footer.copyright;
 
 //===========================Navigation task ==================
 
-
-const aNav = document.querySelector("nav").children;
+const aNav = document.querySelector('nav').children;
 console.log(aNav);
-Array.from(aNav).forEach(item => item.style.color='green');
+Array.from(aNav).forEach((item) => (item.style.color = 'green'));
 
-const navTab=document.querySelector('nav');
+const navTab = document.querySelector('nav');
 
-const firstElement=document.createElement('a');
-firstElement.textContent='Last Element';
+const firstElement = document.createElement('a');
+firstElement.textContent = 'Last Element';
 
-const secondElement=document.createElement('a');
-secondElement.textContent="First Element";
+const secondElement = document.createElement('a');
+secondElement.textContent = 'First Element';
 
 navTab.append(firstElement);
 navTab.prepend(secondElement);
